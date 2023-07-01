@@ -5,7 +5,6 @@ import 'DetailPage3.dart';
 
 import 'navbarPages.dart';
 
-
 class GeoCesped extends StatefulWidget {
   @override
   _GeoCespedState createState() => _GeoCespedState();
@@ -57,12 +56,25 @@ class _GeoCespedState extends State<GeoCesped> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text( 'Geotermómetros Cesped',),
-          
+              SizedBox(height: 20.0),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Geotermómetros Cesped:',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
               for (var i = 0; i < _labels.length; i++)
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10.0),
                   child: Row(
                     children: <Widget>[
                       Text(_labels[i], style: TextStyle(fontSize: 16)),
@@ -71,8 +83,11 @@ class _GeoCespedState extends State<GeoCesped> {
                         child: TextFormField(
                           controller: _geotermometrosControllers[i],
                           decoration: InputDecoration(
-                            hintText: 'Ingresar datos',
-                          ),
+                              hintText: 'Ingresar datos',
+                              border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                              )),
                         ),
                       ),
                     ],
@@ -87,17 +102,18 @@ class _GeoCespedState extends State<GeoCesped> {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 255, 17, 0),
+                      primary: Colors.red,
                     ),
                     child: Text('Atras'),
                   ),
                   SizedBox(width: 80),
                   ElevatedButton(
                     onPressed: () {
-                       Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => DetailPageThree()),
-                       );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailPageThree()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 43, 255, 0),

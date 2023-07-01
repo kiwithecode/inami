@@ -67,21 +67,29 @@ class _VeloVientoState extends State<VeloViento> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
-              Text(
-                'Velocidad del viento(Anemometro)',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              SizedBox(height: 20.0),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Velocidad del viento(Anemometro):',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
                     hintText: 'km/h',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
                     suffixIcon: IconButton(
                       onPressed: () => _generoController.clear(),
                       icon: Icon(Icons.clear),
@@ -91,9 +99,6 @@ class _VeloVientoState extends State<VeloViento> {
                         // Agrega la funcionalidad de búsqueda aquí
                       },
                       icon: Icon(Icons.search),
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),

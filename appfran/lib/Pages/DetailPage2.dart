@@ -41,15 +41,42 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NavbarPages(_formattedDate),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Menú'),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(63, 210, 199, 0.99),
+              ),
+            ),
+            ListTile(
+              title: Text('Opción 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Opción 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 50),
-            Container(
-              child: Text(
-                'Velocidad del Viento:',
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+            SizedBox(height: 30.0),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Text(
+                    'Velocidad del Viento:',
+                    style:
+                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ),
             Padding(
@@ -63,14 +90,23 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
                 ),
               ),
             ),
-            SizedBox(height: 50),
-            Text(
-              'Dirección del Viento:',
-              style: TextStyle(fontSize: 15),
-            ),
-            SizedBox(height: 8),
+            SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Text(
+                    'Dirección del Viento:',
+                    style:
+                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            //SizedBox(height: 20),
+
+            Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Expanded(
                 child: DropdownButton<String>(
                   value: _dropdownValue,
@@ -79,11 +115,7 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
                   elevation: 15,
                   style: TextStyle(
                     fontSize: 15,
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                  ),
-                  underline: Container(
-                    height: 2,
-                    color: const Color.fromARGB(255, 0, 0, 0),
+                    color: Colors.black,
                   ),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -95,7 +127,7 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Padding(
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8.0),
                         child: Text(
                           value,
                           style: TextStyle(fontSize: 15),
@@ -110,6 +142,7 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                /*
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -119,39 +152,45 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
                   ),
                   child: Text('Atras'),
                 ),
-                ElevatedButton(
-  onPressed: () {
-    // Obtener la hora actual
-    DateTime now = DateTime.now();
+                */
+                SizedBox(width: 90),
+               ElevatedButton(
+                  onPressed: () {
+                    // Obtener la hora actual
+                    DateTime now = DateTime.now();
 
-    // Definir las horas de inicio y fin
-    DateTime morningStart = DateTime(now.year, now.month, now.day, 7); // 7 AM
-    DateTime morningEnd = DateTime(now.year, now.month, now.day, 18); // 8 AM
-   DateTime eveningStart = DateTime(now.year, now.month, now.day, 12); // 10 PM
-    DateTime eveningEnd = DateTime(now.year, now.month, now.day, 23); // 11 PM
+                    // Definir las horas de inicio y fin
+                    DateTime morningStart =
+                        DateTime(now.year, now.month, now.day, 7); // 7 AM
+                    DateTime morningEnd =
+                        DateTime(now.year, now.month, now.day, 18); // 8 AM
+                    DateTime eveningStart =
+                        DateTime(now.year, now.month, now.day, 12); // 10 PM
+                    DateTime eveningEnd =
+                        DateTime(now.year, now.month, now.day, 23); // 11 PM
 
-    // Comprobar si la hora actual está en el rango permitido
-    if (now.isAfter(morningStart) && now.isBefore(morningEnd)) {
-      // Si es por la mañana
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => TermoMini()),
-      );
-    } 
-    else if (now.isAfter(eveningStart) && now.isBefore(eveningEnd)) {
-      // Si es por la noche
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => DetailPageThree()),
-      );
-    }
-  },
-  style: ElevatedButton.styleFrom(
-    primary: Color.fromARGB(255, 43, 255, 0),
-  ),
-  child: Text('Siguiente'),
-),
-
+                    // Comprobar si la hora actual está en el rango permitido
+                    if (now.isAfter(morningStart) && now.isBefore(morningEnd)) {
+                      // Si es por la mañana
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TermoMini()),
+                      );
+                    } else if (now.isAfter(eveningStart) &&
+                        now.isBefore(eveningEnd)) {
+                      // Si es por la noche
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailPageThree()),
+                      );
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 43, 255, 0),
+                  ),
+                  child: Text('Siguiente'),
+                ),
               ],
             ),
           ],

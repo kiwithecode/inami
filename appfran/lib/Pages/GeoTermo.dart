@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'navbarPages.dart';
 
-
 class GeoTermo extends StatefulWidget {
   @override
   _GeoTermoState createState() => _GeoTermoState();
@@ -52,16 +51,50 @@ class _GeoTermoState extends State<GeoTermo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NavbarPages(_formattedDate),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Menú'),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(63, 210, 199, 0.99),
+              ),
+            ),
+            ListTile(
+              title: Text('Opción 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Opción 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text( 'Geotermómetros Desnudo',),
-          
+              SizedBox(height: 20.0),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Geotermómetros Desnudo:',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
               for (var i = 0; i < _labels.length; i++)
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10.0),
                   child: Row(
                     children: <Widget>[
                       Text(_labels[i], style: TextStyle(fontSize: 16)),
@@ -70,8 +103,11 @@ class _GeoTermoState extends State<GeoTermo> {
                         child: TextFormField(
                           controller: _geotermometrosControllers[i],
                           decoration: InputDecoration(
-                            hintText: 'Ingresar datos',
-                          ),
+                              hintText: 'Ingresar datos',
+                              border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                              )),
                         ),
                       ),
                     ],
@@ -93,10 +129,10 @@ class _GeoTermoState extends State<GeoTermo> {
                   SizedBox(width: 80),
                   ElevatedButton(
                     onPressed: () {
-                       Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => GeoMulch()),
-                       );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => GeoMulch()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 43, 255, 0),

@@ -44,12 +44,47 @@ class _PrecipitacionState extends State<Precipitacion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NavbarPages(_formattedDate),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Menú'),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(63, 210, 199, 0.99),
+              ),
+            ),
+            ListTile(
+              title: Text('Opción 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Opción 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 30.0),
+              SizedBox(height: 150.0),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Precipitación:',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: TextFormField(
@@ -61,8 +96,7 @@ class _PrecipitacionState extends State<Precipitacion> {
                       )),
                 ),
               ),
-              SizedBox(height: 50),
-              SizedBox(height: 100),
+              SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

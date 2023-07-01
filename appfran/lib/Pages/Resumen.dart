@@ -65,24 +65,33 @@ class _ResumenState extends State<Resumen> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
-              Text(
-                'Resumen',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 25),
-              ),
-              SizedBox(height: 25),
-              Text(
-                'Velocidad del viento',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              //SizedBox(height: 10.0),
+              Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Resumen:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              // SizedBox(height: 20),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Velocidad del viento:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -91,18 +100,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'm/s',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
-              Text(
-                'Direccion del viento',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Direccion del viento:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -111,18 +125,22 @@ class _ResumenState extends State<Resumen> {
                     hintText: '',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
-              Text(
-                'Termometro de Minima',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Termometro de Minima:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -131,18 +149,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'm/s',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
-              Text(
-                'Precipitación',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Precipitación:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -151,11 +174,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'm/m',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Geotermometro:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Geotermometro',
                 style: Theme.of(context)
@@ -163,6 +198,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -171,11 +207,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: '°C',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Cantidad total de nubosidad:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Cantidad total de nubosidad',
                 style: Theme.of(context)
@@ -183,19 +231,32 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
-                    hintText: '',
+                    hintText: 'Este',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Cantidad total de nubes bajas:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Cantidad total de nubes bajas',
                 style: Theme.of(context)
@@ -203,6 +264,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -211,11 +273,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: '',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Cantidad total de nubes medias:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Cantidad total de nubes medias',
                 style: Theme.of(context)
@@ -223,6 +297,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -231,11 +306,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: '',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Cantidad total de nubes altas:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Cantidad total de nubes altas',
                 style: Theme.of(context)
@@ -243,6 +330,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -251,11 +339,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: '',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Fenomeno Registrado:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Fenomeno Registrado',
                 style: Theme.of(context)
@@ -263,6 +363,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -271,11 +372,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: '',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Lectura micrometro:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Lectura micrometro',
                 style: Theme.of(context)
@@ -283,6 +396,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -291,11 +405,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'mm',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Velocidad del viento (Anemometro):',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Velocidad del viento (Anemometro)',
                 style: Theme.of(context)
@@ -303,6 +429,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -311,11 +438,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'Km/h',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Velocidad Horizontal:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Velocidad Horizontal',
                 style: Theme.of(context)
@@ -323,6 +462,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -331,11 +471,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'Km',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Termómetro seco:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Termómetro seco',
                 style: Theme.of(context)
@@ -343,6 +495,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -351,11 +504,23 @@ class _ResumenState extends State<Resumen> {
                     hintText: '°C',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Termómetro Humedo:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+              /*
               Text(
                 'Termómetro Humedo',
                 style: Theme.of(context)
@@ -363,6 +528,7 @@ class _ResumenState extends State<Resumen> {
                     .headline4!
                     .copyWith(fontSize: 15),
               ),
+              */
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -371,18 +537,22 @@ class _ResumenState extends State<Resumen> {
                     hintText: '°C',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
-              Text(
-                'Presion Atmosferica',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Presion Atmosferica:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
@@ -391,12 +561,12 @@ class _ResumenState extends State<Resumen> {
                     hintText: 'hPa',
                     icon: Icon(Icons.check_circle),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.zero),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 100),
+              SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

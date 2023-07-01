@@ -69,14 +69,20 @@ class _DetailPageSixState extends State<DetailPageSix> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                'Cantidad Total de Nubes Nubosidad:',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
+              SizedBox(height: 20.0),
+              Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Cantidad Total de Nubes Nubosidad:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: DropdownButton<String>(

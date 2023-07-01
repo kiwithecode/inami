@@ -44,19 +44,45 @@ class _DetailPageThreeState extends State<DetailPageThree> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NavbarPages(_formattedDate),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Menú'),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(63, 210, 199, 0.99),
+              ),
+            ),
+            ListTile(
+              title: Text('Opción 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Opción 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
+              SizedBox(height: 20.0),
               Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Text(
-                  'Cantidad Total de Nubes Bajas:',
-                  style: TextStyle(fontSize: 15),
-                ),
-              ),
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Cantidad Total de Nubes Bajas:',
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: DropdownButton<String>(
@@ -82,12 +108,12 @@ class _DetailPageThreeState extends State<DetailPageThree> {
                   }).toList(),
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
                   'Altura:',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 ),
               ),
               Padding(
@@ -95,16 +121,23 @@ class _DetailPageThreeState extends State<DetailPageThree> {
                 child: TextField(
                   controller: _alturaController,
                   decoration: InputDecoration(
-                    hintText: 'Introduce la altura aquí',
-                  ),
+                      hintText: 'Introduce la altura aquí',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      )),
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 20.0),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Text(
-                  'Género de las Nubes:',
-                  style: TextStyle(fontSize: 15),
+                child: Column(
+                  children: [
+                    Text(
+                      'Género de las Nubes:',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
               ),
               Padding(
@@ -112,15 +145,18 @@ class _DetailPageThreeState extends State<DetailPageThree> {
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
-                    hintText: 'Introduce el género de las nubes aquí',
+                    hintText: 'Buscar',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
                     suffixIcon: IconButton(
                       onPressed: () => _generoController.clear(),
-                      icon: Icon(Icons.clear),
+                      icon: Icon(Icons.search),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 100),
+              SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -129,11 +165,11 @@ class _DetailPageThreeState extends State<DetailPageThree> {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 255, 17, 0),
+                      primary: Colors.red,
                     ),
                     child: Text('Atras'),
                   ),
-                  SizedBox(width: 80),
+                  SizedBox(width: 80.0),
                   ElevatedButton(
                     onPressed: () {
                       // Obtener la hora actual

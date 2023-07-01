@@ -44,15 +44,45 @@ class _TermoMiniState extends State<TermoMini> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NavbarPages(_formattedDate),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Menú'),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(63, 210, 199, 0.99),
+              ),
+            ),
+            ListTile(
+              title: Text('Opción 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Opción 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
-              Text(
-                'Termómetro de mínima',
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+              SizedBox(height: 150.0),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Termómetro de mínima:',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: 20),
               Padding(
