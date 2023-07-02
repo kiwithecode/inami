@@ -69,7 +69,7 @@ class _PresionAtmosState extends State<PresionAtmos> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
+              SizedBox(height: 180),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -83,6 +83,8 @@ class _PresionAtmosState extends State<PresionAtmos> {
                   )),
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -101,7 +103,7 @@ class _PresionAtmosState extends State<PresionAtmos> {
                       icon: Icon(Icons.search),
                     ),
                   ),
-                ),
+                ),),
               ),
               SizedBox(height: 100),
               Row(
@@ -131,9 +133,9 @@ class _PresionAtmosState extends State<PresionAtmos> {
 
                         // Definir las horas de inicio y fin
                         DateTime morningStart =
-                            DateTime(now.year, now.month, now.day, 7); // 7 AM
+                            DateTime(now.year, now.month, now.day, 1); // 7 AM
                         DateTime morningEnd =
-                            DateTime(now.year, now.month, now.day, 8); // 8 AM
+                            DateTime(now.year, now.month, now.day, 20); // 8 AM
                         DateTime eveningStart =
                             DateTime(now.year, now.month, now.day, 22); // 10 PM
                         DateTime eveningEnd =

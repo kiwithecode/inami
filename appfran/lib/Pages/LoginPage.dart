@@ -46,9 +46,9 @@ void _login() {
 
     // Definir las horas de inicio y fin
     DateTime morningStart = DateTime(now.year, now.month, now.day, 9); // 7 AM
-    DateTime morningEnd = DateTime(now.year, now.month, now.day, 10); // 8 AM
-    DateTime eveningStart = DateTime(now.year, now.month, now.day, 12); // 10 PM
-    DateTime eveningEnd = DateTime(now.year, now.month, now.day, 23); // 11 PM
+    DateTime morningEnd = DateTime(now.year, now.month, now.day, 23); // 8 AM
+    DateTime eveningStart = DateTime(now.year, now.month, now.day, 8); // 10 PM
+    DateTime eveningEnd = DateTime(now.year, now.month, now.day, 7); // 11 PM
 
     // Comprobar si la hora actual está en el rango permitido
     if ((now.isAfter(morningStart) && now.isBefore(morningEnd)) || 

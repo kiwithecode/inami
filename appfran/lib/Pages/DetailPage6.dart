@@ -71,7 +71,7 @@ class _DetailPageSixState extends State<DetailPageSix> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20.0),
+              SizedBox(height: 180.0),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -87,13 +87,13 @@ class _DetailPageSixState extends State<DetailPageSix> {
                 padding: const EdgeInsets.all(20.0),
                 child: DropdownButton<String>(
                   value: _dropdownValue,
-                  icon: Icon(Icons.arrow_downward),
+                  icon: Icon(Icons.keyboard_arrow_down),
                   iconSize: 24,
                   elevation: 16,
-                  style: TextStyle(color: Colors.deepPurple),
+                  style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
                   underline: Container(
                     height: 2,
-                    color: Colors.deepPurpleAccent,
+                    color: const Color.fromARGB(255, 0, 0, 0),
                   ),
                   onChanged: (String? newValue) {
                     setState(() {

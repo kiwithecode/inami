@@ -70,7 +70,7 @@ class _DetailPageSevenState extends State<DetailPageSeven> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
+              SizedBox(height: 180),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -84,6 +84,8 @@ class _DetailPageSevenState extends State<DetailPageSeven> {
                   )),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -102,6 +104,7 @@ class _DetailPageSevenState extends State<DetailPageSeven> {
                       icon: Icon(Icons.search),
                     ),
                   ),
+                ),
                 ),
               ),
               SizedBox(height: 100),

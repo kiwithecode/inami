@@ -71,7 +71,7 @@ class _DetailPageFiveState extends State<DetailPageFive> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20.0),
+              SizedBox(height: 100.0),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -87,13 +87,13 @@ class _DetailPageFiveState extends State<DetailPageFive> {
                 padding: const EdgeInsets.all(20.0),
                 child: DropdownButton<String>(
                   value: _dropdownValue,
-                  icon: Icon(Icons.arrow_downward),
+                  icon: Icon(Icons.keyboard_arrow_down),
                   iconSize: 24,
                   elevation: 16,
-                  style: TextStyle(fontSize: 15, color: Colors.deepPurple),
+                  style: TextStyle(fontSize: 15, color: const Color.fromARGB(255, 0, 0, 0)),
                   underline: Container(
                     height: 2,
-                    color: Colors.deepPurpleAccent,
+                    color: const Color.fromARGB(255, 0, 0, 0),
                   ),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -118,6 +118,8 @@ class _DetailPageFiveState extends State<DetailPageFive> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _alturaController,
                   decoration: InputDecoration(
@@ -125,6 +127,7 @@ class _DetailPageFiveState extends State<DetailPageFive> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                       )),
+                ),
                 ),
               ),
               SizedBox(height: 8.0),
@@ -143,6 +146,8 @@ class _DetailPageFiveState extends State<DetailPageFive> {
               SizedBox(height: 8.0),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -155,6 +160,7 @@ class _DetailPageFiveState extends State<DetailPageFive> {
                       icon: Icon(Icons.search),
                     ),
                   ),
+                ),
                 ),
               ),
               SizedBox(height: 20.0),

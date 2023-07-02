@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:appfran/Pages/Confir.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'navbarPages.dart';
@@ -94,13 +95,16 @@ class _ResumenState extends State<Resumen> {
                   )),
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: TextField(
-                  controller: _generoController,
-                  decoration: InputDecoration(
-                    hintText: 'm/s',
-                    icon: Icon(Icons.check_circle),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                child: Container(
+                  width: 250,
+                  child: TextField(
+                    controller: _generoController,
+                    decoration: InputDecoration(
+                      hintText: 'm/s',
+                      icon: Icon(Icons.check_circle),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
                     ),
                   ),
                 ),
@@ -118,18 +122,20 @@ class _ResumenState extends State<Resumen> {
                   )),
 
               Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: TextField(
-                  controller: _generoController,
-                  decoration: InputDecoration(
-                    hintText: '',
-                    icon: Icon(Icons.check_circle),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                  padding: const EdgeInsets.all(15.0),
+                  child: Container(
+                    width: 250,
+                    child: TextField(
+                      controller: _generoController,
+                      decoration: InputDecoration(
+                        hintText: '',
+                        icon: Icon(Icons.check_circle),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
+                  )),
               Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -142,18 +148,20 @@ class _ResumenState extends State<Resumen> {
                     ],
                   )),
               Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: TextField(
-                  controller: _generoController,
-                  decoration: InputDecoration(
-                    hintText: 'm/s',
-                    icon: Icon(Icons.check_circle),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                  padding: const EdgeInsets.all(15.0),
+                  child: Container(
+                    width: 250,
+                    child: TextField(
+                      controller: _generoController,
+                      decoration: InputDecoration(
+                        hintText: 'm/s',
+                        icon: Icon(Icons.check_circle),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
+                  )),
               Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -167,18 +175,20 @@ class _ResumenState extends State<Resumen> {
                   )),
 
               Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: TextField(
-                  controller: _generoController,
-                  decoration: InputDecoration(
-                    hintText: 'm/m',
-                    icon: Icon(Icons.check_circle),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                  padding: const EdgeInsets.all(15.0),
+                  child: Container(
+                    width: 250,
+                    child: TextField(
+                      controller: _generoController,
+                      decoration: InputDecoration(
+                        hintText: 'm/m',
+                        icon: Icon(Icons.check_circle),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
+                  )),
               Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -201,6 +211,8 @@ class _ResumenState extends State<Resumen> {
               */
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -210,7 +222,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -223,17 +235,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Cantidad total de nubosidad',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+             
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -243,7 +249,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -256,17 +262,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Cantidad total de nubes bajas',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+            
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -276,7 +276,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -289,17 +289,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Cantidad total de nubes medias',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+            
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -309,7 +303,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -322,17 +316,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Cantidad total de nubes altas',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+             
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -342,7 +330,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -355,17 +343,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Fenomeno Registrado',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+            
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -375,7 +357,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -388,17 +370,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Lectura micrometro',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+             
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -408,7 +384,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -421,17 +397,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Velocidad del viento (Anemometro)',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+            
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -441,7 +411,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -454,17 +424,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Velocidad Horizontal',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+            
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -474,7 +438,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -487,17 +451,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Termómetro seco',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+        
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -507,7 +465,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -520,17 +478,11 @@ class _ResumenState extends State<Resumen> {
                       ),
                     ],
                   )),
-              /*
-              Text(
-                'Termómetro Humedo',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
+             
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -540,7 +492,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -555,6 +507,8 @@ class _ResumenState extends State<Resumen> {
                   )),
               Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Container(
+    width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -564,7 +518,7 @@ class _ResumenState extends State<Resumen> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),)
               ),
               SizedBox(height: 20.0),
               Row(
@@ -589,11 +543,11 @@ class _ResumenState extends State<Resumen> {
                     height: 100.0,
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-
-                        //   MaterialPageRoute(builder: (context) => Resumen()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Confirmacion()),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         primary: Color.fromARGB(255, 43, 255, 0),

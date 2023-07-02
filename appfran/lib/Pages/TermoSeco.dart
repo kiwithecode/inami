@@ -69,7 +69,7 @@ class _TermoSecoState extends State<TermoSeco> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
+              SizedBox(height: 180),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -83,6 +83,8 @@ class _TermoSecoState extends State<TermoSeco> {
                   )),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -101,7 +103,7 @@ class _TermoSecoState extends State<TermoSeco> {
                       icon: Icon(Icons.search),
                     ),
                   ),
-                ),
+                ),),
               ),
               SizedBox(height: 100),
               Row(

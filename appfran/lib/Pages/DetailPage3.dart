@@ -71,7 +71,7 @@ class _DetailPageThreeState extends State<DetailPageThree> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20.0),
+              SizedBox(height: 100.0),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -87,13 +87,14 @@ class _DetailPageThreeState extends State<DetailPageThree> {
                 padding: const EdgeInsets.all(20.0),
                 child: DropdownButton<String>(
                   value: _dropdownValue,
-                  icon: Icon(Icons.arrow_downward),
+                  icon: Icon(Icons.keyboard_arrow_down),
                   iconSize: 24,
                   elevation: 16,
-                  style: TextStyle(fontSize: 15, color: Colors.deepPurple),
+                  style: TextStyle(
+                      fontSize: 15, color: const Color.fromARGB(255, 0, 0, 0)),
                   underline: Container(
                     height: 2,
-                    color: Colors.deepPurpleAccent,
+                    color: const Color.fromARGB(255, 0, 0, 0),
                   ),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -118,13 +119,17 @@ class _DetailPageThreeState extends State<DetailPageThree> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: TextField(
-                  controller: _alturaController,
-                  decoration: InputDecoration(
-                      hintText: 'Introduce la altura aquí',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      )),
+                child: Container(
+                  width: 250, // Ajusta el valor según tus necesidades
+
+                  child: TextField(
+                    controller: _alturaController,
+                    decoration: InputDecoration(
+                        hintText: 'Introduce la altura aquí',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        )),
+                  ),
                 ),
               ),
               SizedBox(height: 20.0),
@@ -142,16 +147,20 @@ class _DetailPageThreeState extends State<DetailPageThree> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: TextField(
-                  controller: _generoController,
-                  decoration: InputDecoration(
-                    hintText: 'Buscar',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    ),
-                    suffixIcon: IconButton(
-                      onPressed: () => _generoController.clear(),
-                      icon: Icon(Icons.search),
+                child: Container(
+                  width: 250, // Ajusta el valor según tus necesidades
+
+                  child: TextField(
+                    controller: _generoController,
+                    decoration: InputDecoration(
+                      hintText: 'Buscar',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: () => _generoController.clear(),
+                        icon: Icon(Icons.search),
+                      ),
                     ),
                   ),
                 ),

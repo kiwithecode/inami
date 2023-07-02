@@ -71,7 +71,7 @@ class _DetailPageFourState extends State<DetailPageFour> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20.0),
+              SizedBox(height: 100.0),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -88,13 +88,13 @@ class _DetailPageFourState extends State<DetailPageFour> {
                 padding: const EdgeInsets.all(20.0),
                 child: DropdownButton<String>(
                   value: _dropdownValue,
-                  icon: Icon(Icons.keyboard_arrow_down_outlined),
+                  icon: Icon(Icons.keyboard_arrow_down),
                   iconSize: 24,
                   elevation: 16,
-                  style: TextStyle(fontSize: 15, color: Colors.deepPurple),
+                  style: TextStyle(fontSize: 15, color: const Color.fromARGB(255, 0, 0, 0)),
                   underline: Container(
                     height: 2,
-                    color: Colors.deepPurpleAccent,
+                    color: const Color.fromARGB(255, 0, 0, 0),
                   ),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -119,6 +119,8 @@ class _DetailPageFourState extends State<DetailPageFour> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _alturaController,
                   decoration: InputDecoration(
@@ -126,6 +128,7 @@ class _DetailPageFourState extends State<DetailPageFour> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                       )),
+                ),
                 ),
               ),
               SizedBox(height: 20.0),
@@ -143,6 +146,8 @@ class _DetailPageFourState extends State<DetailPageFour> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -155,6 +160,7 @@ class _DetailPageFourState extends State<DetailPageFour> {
                       icon: Icon(Icons.search),
                     ),
                   ),
+                ),
                 ),
               ),
               SizedBox(height: 20.0),

@@ -87,6 +87,8 @@ class _TermoMiniState extends State<TermoMini> {
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Container(
+                width: 250,
                 child: TextFormField(
                   controller: _temperaturaController,
                   decoration: InputDecoration(
@@ -95,7 +97,7 @@ class _TermoMiniState extends State<TermoMini> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
-                ),
+                ),),
               ),
               SizedBox(height: 100),
               Row(

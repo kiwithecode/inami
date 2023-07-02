@@ -69,7 +69,7 @@ class _VisiHState extends State<VisiH> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 150),
+              SizedBox(height: 180),
               Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -83,6 +83,8 @@ class _VisiHState extends State<VisiH> {
                   )),
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                child: Container(
+                width: 250,
                 child: TextField(
                   controller: _generoController,
                   decoration: InputDecoration(
@@ -101,6 +103,7 @@ class _VisiHState extends State<VisiH> {
                       icon: Icon(Icons.search),
                     ),
                   ),
+                ),
                 ),
               ),
               SizedBox(height: 100),

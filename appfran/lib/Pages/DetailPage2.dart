@@ -62,11 +62,12 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
           ],
         ),
       ),
-      body: Center(
+      body: Container(
+        alignment: Alignment.center,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 30.0),
+            SizedBox(height: 150.0),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -81,11 +82,14 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'm/s',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+              child: Container(
+                width: 250, // Ajusta el valor según tus necesidades
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'm/s',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
                   ),
                 ),
               ),
@@ -103,8 +107,6 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
                 ],
               ),
             ),
-            //SizedBox(height: 20),
-
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Expanded(
@@ -142,19 +144,8 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                /*
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 255, 17, 0),
-                  ),
-                  child: Text('Atras'),
-                ),
-                */
                 SizedBox(width: 90),
-               ElevatedButton(
+                ElevatedButton(
                   onPressed: () {
                     // Obtener la hora actual
                     DateTime now = DateTime.now();

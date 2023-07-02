@@ -69,7 +69,7 @@ class _LecturaMicroState extends State<LecturaMicro> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
+              SizedBox(height: 180),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -82,37 +82,30 @@ class _LecturaMicroState extends State<LecturaMicro> {
                   ],
                 ),
               ),
-/*
-              Text(
-                'Lectura micrometro',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontSize: 15),
-              ),
-              */
               Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: TextField(
-                  controller: _generoController,
-                  decoration: InputDecoration(
-                    hintText: 'mm',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                  padding: const EdgeInsets.all(15.0),
+                  child: Container(
+                    width: 250,
+                    child: TextField(
+                      controller: _generoController,
+                      decoration: InputDecoration(
+                        hintText: 'mm',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        suffixIcon: IconButton(
+                          onPressed: () => _generoController.clear(),
+                          icon: Icon(Icons.clear),
+                        ),
+                        prefixIcon: IconButton(
+                          onPressed: () {
+                            // Agrega la funcionalidad de búsqueda aquí
+                          },
+                          icon: Icon(Icons.search),
+                        ),
+                      ),
                     ),
-                    suffixIcon: IconButton(
-                      onPressed: () => _generoController.clear(),
-                      icon: Icon(Icons.clear),
-                    ),
-                    prefixIcon: IconButton(
-                      onPressed: () {
-                        // Agrega la funcionalidad de búsqueda aquí
-                      },
-                      icon: Icon(Icons.search),
-                    ),
-                  ),
-                ),
-              ),
+                  )),
               SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

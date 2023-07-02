@@ -78,7 +78,7 @@ class _GeoTermoState extends State<GeoTermo> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20.0),
+              SizedBox(height: 180.0),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
